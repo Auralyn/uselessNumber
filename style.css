@@ -1,0 +1,16 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+}
+
+
+#image {
+    position: fixed;
+    bottom: -4px;
+    z-index: -1;
+}
