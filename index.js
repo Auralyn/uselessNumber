@@ -3,14 +3,32 @@ function getRandomInt(max) {
 }
 
 function generateNumber() {
-    let num = getRandomInt(99999999999999);
-    let text = num.toString();
+    let random = getRandomInt(2);
+    if(random == 0) {
+        var countryCode = getRandomInt(999);
+    }
+    else{
+        var countryCode = getRandomInt(99);
+    }
+    let areaCode = getRandomInt(99999);
+    let phoneNumber = getRandomInt(99999999990);
 
     const element = document.getElementById("randomNumber");
-    element.innerHTML = "+" + text.substring(0,2) + " " + text.substring(2, 6) + " " + text.substring(6, 99);
+    element.innerHTML = "+" + countryCode.toString() + " " + areaCode.toString() + " " + phoneNumber.toString();
 }
 
 function pauseAudio() {
     document.getElementById("audio").pause();
 }
 
+window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 1;
+    audio.play();
+});
+
+document.getElementById("pause").onclick = function() {
+    var audio = document.getElementById("audio");
+    if (audio.paused) audio.play();
+    else audio.pause();
+};

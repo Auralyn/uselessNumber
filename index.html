@@ -15,7 +15,7 @@
         
     </head>
     <body class="text-center bg-dark text-white" onload="generateNumber()">
-      <img src="menhera.png" id="image"  height="60%">
+      <img src="menhera.png" id="image"  height="60%" onclick="pauseAudio()">
       
       <div class="container-xl">
         <main class="form-signin w-100 m-auto">
@@ -30,16 +30,13 @@
               <button class="w-50 btn btn-lg btn-primary mt-2 mb-2" type="submit" onclick="pauseAudio()">yes</button>
               <button class="w-50 btn btn-lg btn-danger mt-2 mb-2" type="button" onclick="generateNumber()">no</button>
             </div>
-            <p class="mt-4 mb-3 text-muted">© 2022</p>
+            <p class="mt-4 mb-3 text-muted" id="pause">© 2022</p>
           </form>
         </main>
       </div>
         
+        <audio src="Option.mp3" id="audio"></audio>
         
-
-        <audio src="Option.mp3" autoplay loop id="audio">
-          <p>If you are reading this, it is because your browser does not support the audio element.</p>
-        </audio>
         <script src="index.js"></script>
     </body>
 </html>
